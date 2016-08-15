@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<webApiHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <webApi name="ciStartRuleTestsApplications" a:uuid="e1002dd3-1302-40cb-9820-dafcd4ae7a5f">
+        <a:description></a:description>
+        <a:expression>#&quot;SYSTEM_SYSRULES_startRuleTestsApplications&quot;(&#xD;
+applications: #&quot;_a-0000dd52-fbf0-8000-9ba2-011c48011c48_36805&quot;,&#xD;
+onSuccess: #&quot;SYSTEM_SYSRULES_httpResponse&quot;(&#xD;
+statusCode: 200,&#xD;
+  body: fv!testRunId&#xD;
+),&#xD;
+onError: #&quot;SYSTEM_SYSRULES_httpResponse&quot;(&#xD;
+statusCode: 500,&#xD;
+body: concat(&quot;Error message: &quot; , fv!error)&#xD;
+)&#xD;
+)</a:expression>
+        <a:urlAlias>startRuleTestsApplications</a:urlAlias>
+        <a:httpMethod>POST</a:httpMethod>
+        <a:system>false</a:system>
+    </webApi>
+    <roleMap>
+        <role name="web_api_administrator">
+            <users/>
+            <groups>
+                <groupUuid>_e-0000dd37-e908-8000-9aee-01075c01075c_142</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <typedValue>
+        <type>
+            <name>WebApiRequest?list</name>
+            <namespace>http://www.appian.com/ae/types/2009</namespace>
+        </type>
+        <value>
+            <el>
+                <a:path/>
+                <a:body/>
+            </el>
+        </value>
+    </typedValue>
+</webApiHaul>

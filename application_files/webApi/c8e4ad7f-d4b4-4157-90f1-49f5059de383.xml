@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<webApiHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <webApi name="ciTestRunStatusForId" a:uuid="c8e4ad7f-d4b4-4157-90f1-49f5059de383">
+        <a:description></a:description>
+        <a:expression>#&quot;SYSTEM_SYSRULES_httpResponse&quot;(
+  /*
+  * The 'statusCode' parameter is a number that represents the HTTP status code
+  * of the response. If no status code is specified, a default of '200' is used,
+  * meaning that the request was successful.
+  */
+  statusCode: 200,
+
+  /*
+  * The 'headers' parameter is a list of HTTP headers to include on the response.
+  * HTTP headers should be built with 'a!httpHeader()'.
+  */
+  headers: {},
+
+  /*
+  * The 'body' parameter is the text that will be included in the HTTP response's
+  * body.
+  */
+  body: #&quot;SYSTEM_SYSRULES_testRunStatusForId&quot;(http!request.queryParameters.id)
+)</a:expression>
+        <a:urlAlias>testRunStatusForId</a:urlAlias>
+        <a:httpMethod>GET</a:httpMethod>
+        <a:system>false</a:system>
+    </webApi>
+    <roleMap>
+        <role name="web_api_administrator">
+            <users/>
+            <groups>
+                <groupUuid>_e-0000dd37-e908-8000-9aee-01075c01075c_142</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <typedValue>
+        <type>
+            <name>WebApiRequest?list</name>
+            <namespace>http://www.appian.com/ae/types/2009</namespace>
+        </type>
+        <value>
+            <el>
+                <a:path/>
+                <a:body/>
+            </el>
+        </value>
+    </typedValue>
+</webApiHaul>

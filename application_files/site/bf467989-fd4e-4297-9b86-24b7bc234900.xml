@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<siteHaul xmlns:a="http://www.appian.com/ae/types/2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <site a:uuid="bf467989-fd4e-4297-9b86-24b7bc234900" name="unitTesting">
+    <description/>
+    <urlStub>unittesting</urlStub>
+    <page>
+      <staticName>Automated Testing</staticName>
+      <description/>
+      <urlStub>automated-testing</urlStub>
+      <uiObject a:uuid="8002a0e3-a9b8-4894-86b5-76f3b39dd39d" xsi:type="a:TaskReport"/>
+      <iconId>f012</iconId>
+      <visibilityExpr>fn!true()</visibilityExpr>
+    </page>
+    <visibility>268435456</visibility>
+    <headerBackgroundColor>#004d00</headerBackgroundColor>
+    <selectedTabBackgroundColor>#ccffcc</selectedTabBackgroundColor>
+    <faviconRef a:uuid="SYSTEM_CONTENT_SITES_DEFAULT_FAVICON" xsi:type="a:CollaborationDocument"/>
+    <faviconHref/>
+    <logoRef a:uuid="SYSTEM_CONTENT_SITES_DEFAULT_LOGO" xsi:type="a:CollaborationDocument"/>
+    <logoHref/>
+    <headerBackgroundColorExpr/>
+    <selectedTabBackgroundColorExpr/>
+  </site>
+  <roleMap/>
+</siteHaul>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <rule>
+        <name>ciSystemTestUI</name>
+        <uuid>_a-0000dd45-b36c-8000-aae2-01ef9001ef90_8131</uuid>
+        <description></description>
+        <parentUuid>_a-0000dd52-fbf0-8000-9ba2-011c48011c48_36804</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>=load(&#xD;
+  local!testRunId,&#xD;
+  local!error,&#xD;
+  local!testStatus,&#xD;
+  local!isAppTest,&#xD;
+  with(&#xD;
+    local!testRunResults: if(isnull(local!testRunId), null, #&quot;SYSTEM_SYSRULES_testRunResultForId&quot;(local!testRunId)),&#xD;
+    #&quot;SYSTEM_SYSRULES_dashboardLayout&quot;(&#xD;
+      firstColumnContents: {&#xD;
+        #&quot;SYSTEM_SYSRULES_ButtonLayout&quot;(&#xD;
+          primaryButtons: {&#xD;
+          },&#xD;
+          secondaryButtons: {&#xD;
+            #&quot;SYSTEM_SYSRULES_ButtonWidget&quot;(&#xD;
+              label: &quot;Run System Test&quot;,&#xD;
+              value: local!testRunId,&#xD;
+              saveInto: {&#xD;
+                #&quot;SYSTEM_SYSRULES_startRuleTestsAll&quot;(&#xD;
+                  onSuccess: {&#xD;
+                    a!save(local!testRunId, fv!testRunId)&#xD;
+                  },&#xD;
+                  onError: {&#xD;
+                    a!save(local!error, &quot;Could not execute test.&quot;)&#xD;
+                  }&#xD;
+                ),&#xD;
+                a!save(local!isAppTest, false)&#xD;
+              }&#xD;
+            ),&#xD;
+            #&quot;SYSTEM_SYSRULES_ButtonWidget&quot;(&#xD;
+              label: &quot;Run App Test&quot;,&#xD;
+              value: local!testRunId,&#xD;
+              saveInto: {&#xD;
+                  #&quot;SYSTEM_SYSRULES_startRuleTestsApplications&quot;(&#xD;
+                    applications: #&quot;_a-0000dd52-fbf0-8000-9ba2-011c48011c48_36805&quot;,&#xD;
+                    onSuccess: {&#xD;
+                      a!save(local!testRunId, fv!testRunId)&#xD;
+                    },&#xD;
+                    onError: {&#xD;
+                      a!save(local!error, &quot;Could not execute test.&quot;)&#xD;
+                    }&#xD;
+                ),&#xD;
+                a!save(local!isAppTest, true)&#xD;
+              }&#xD;
+            ),&#xD;
+            #&quot;SYSTEM_SYSRULES_ButtonWidget&quot;(&#xD;
+              label: &quot;Refresh&quot;,&#xD;
+              value: local!testStatus&#xD;
+              ,&#xD;
+              saveInto: {&#xD;
+                a!save(local!testStatus, #&quot;SYSTEM_SYSRULES_testRunStatusForId&quot;(local!testRunId))&#xD;
+              }&#xD;
+            )&#xD;
+          }&#xD;
+        ),&#xD;
+        #&quot;SYSTEM_SYSRULES_sectionLayout&quot;(&#xD;
+          label: &quot;Summary&quot; &amp; &#xD;
+             if(isnull(local!testRunResults), null, &quot; - &quot; &amp; local!testRunResults.type),&#xD;
+          firstColumnContents: {&#xD;
+            if(isnull(local!testRunResults), &#xD;
+              {},&#xD;
+              {&#xD;
+                #&quot;SYSTEM_SYSRULES_textField&quot;(&#xD;
+                  label: &quot;Test-run ID&quot;,&#xD;
+                  labelPosition: &quot;ADJACENT&quot;,&#xD;
+                  value: local!testRunId,&#xD;
+                  readOnly: true&#xD;
+                ),&#xD;
+                #&quot;SYSTEM_SYSRULES_richTextDisplayField&quot;(&#xD;
+                  label: &quot;Status&quot;,&#xD;
+                  labelPosition: &quot;ADJACENT&quot;,&#xD;
+                  value: if(local!testStatus = &quot;COMPLETE&quot;,&#xD;
+                    if(&#xD;
+                      local!testRunResults.status=&quot;ERROR&quot;,&#xD;
+                      {&#xD;
+                        #&quot;SYSTEM_SYSRULES_richTextImage&quot;(image: #&quot;SYSTEM_SYSRULES_documentImage&quot;(document: #&quot;SYSTEM_SYSRULES_iconIndicator&quot;(&quot;STATUS_ERROR&quot;))),&#xD;
+                        &quot;One or more tests encountered an error&quot;&#xD;
+                      },&#xD;
+                      local!testRunResults.status=&quot;FAIL&quot;,&#xD;
+                      {&#xD;
+                        #&quot;SYSTEM_SYSRULES_richTextImage&quot;(image: #&quot;SYSTEM_SYSRULES_documentImage&quot;(document: #&quot;SYSTEM_SYSRULES_iconIndicator&quot;(&quot;STATUS_NOTDONE&quot;))),&#xD;
+                        &quot;One or more test case assertions failed&quot;&#xD;
+                      },&#xD;
+                      local!testRunResults.status=&quot;PASS&quot;,&#xD;
+                      {&#xD;
+                        #&quot;SYSTEM_SYSRULES_richTextImage&quot;(image: #&quot;SYSTEM_SYSRULES_documentImage&quot;(document: #&quot;SYSTEM_SYSRULES_iconIndicator&quot;(&quot;STATUS_OK&quot;))),&#xD;
+                        &quot;All test case assertions passed&quot;&#xD;
+                      },&#xD;
+                      {&#xD;
+                        #&quot;SYSTEM_SYSRULES_richTextImage&quot;(image: #&quot;SYSTEM_SYSRULES_documentImage&quot;(document: #&quot;SYSTEM_SYSRULES_iconIndicator&quot;(&quot;PROGRESS_RUNNING&quot;))),&#xD;
+                        &quot;In progress&quot;&#xD;
+                      }&#xD;
+                    ),&#xD;
+                      {&#xD;
+                        #&quot;SYSTEM_SYSRULES_richTextImage&quot;(image: #&quot;SYSTEM_SYSRULES_documentImage&quot;(document: #&quot;SYSTEM_SYSRULES_iconIndicator&quot;(&quot;PROGRESS_RUNNING&quot;))),&#xD;
+                        &quot;In progress&quot;&#xD;
+                      }                    &#xD;
+                  )&#xD;
+                    &#xD;
+                ),&#xD;
+                #&quot;SYSTEM_SYSRULES_textField&quot;(&#xD;
+                  label: &quot;Execution Time&quot;,&#xD;
+                  labelPosition: &quot;ADJACENT&quot;,&#xD;
+                  value: (local!testRunResults.totalExecutionTime) &amp; &quot; seconds&quot;,&#xD;
+                  readOnly: true&#xD;
+                ),&#xD;
+                #&quot;SYSTEM_SYSRULES_textField&quot;(&#xD;
+                  label: &quot;Total Time&quot;,&#xD;
+                  labelPosition: &quot;ADJACENT&quot;,&#xD;
+                  value: (local!testRunResults.totalElapsedTime) &amp; &quot; seconds&quot;,&#xD;
+                  readOnly: true&#xD;
+                ),&#xD;
+                #&quot;SYSTEM_SYSRULES_textField&quot;(&#xD;
+                  label: &quot;Executed On&quot;,&#xD;
+                  labelPosition: &quot;ADJACENT&quot;,&#xD;
+                  value: local!testRunResults.startTime,&#xD;
+                  readOnly: true&#xD;
+                ),&#xD;
+                #&quot;SYSTEM_SYSRULES_textField&quot;(&#xD;
+                  label: &quot;Executed By&quot;,&#xD;
+                  labelPosition: &quot;ADJACENT&quot;,&#xD;
+                  value: user(local!testRunResults.executedBy, &quot;firstName&quot;) &amp; &quot; &quot; &amp;&#xD;
+                  user(local!testRunResults.executedBy, &quot;lastName&quot;),&#xD;
+                  readOnly: true&#xD;
+                )&#xD;
+              }&#xD;
+            )&#xD;
+          },&#xD;
+          secondColumnContents: {&#xD;
+            if(isnull(local!testRunResults), &#xD;
+              {},&#xD;
+              #&quot;SYSTEM_SYSRULES_pieChartField&quot;(&#xD;
+                labelPosition: &quot;COLLAPSED&quot;,&#xD;
+                series: {&#xD;
+                  #&quot;SYSTEM_SYSRULES_chartSeries&quot;(label: &quot;Passed&quot;, data: local!testRunResults.passCount, color: &quot;GREEN&quot;),&#xD;
+                  #&quot;SYSTEM_SYSRULES_chartSeries&quot;(label: &quot;Failed&quot;, data: local!testRunResults.failureCount, color: &quot;YELLOW&quot;),&#xD;
+                  #&quot;SYSTEM_SYSRULES_chartSeries&quot;(label: &quot;Error&quot;, data: local!testRunResults.errorCount, color: &quot;RED&quot;)&#xD;
+                },&#xD;
+                showDataLabels: true&#xD;
+              )&#xD;
+            )&#xD;
+          }&#xD;
+        )&#xD;
+      },&#xD;
+      secondColumnContents: {}&#xD;
+    )&#xD;
+  )&#xD;
+)</definition>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role allowForAll="false" inherit="true" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="true" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="true" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role allowForAll="false" inherit="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+</contentHaul>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<webApiHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <webApi name="ciStartRuleTestsAll" a:uuid="badc35ac-de84-411b-b03e-f84c49026f1b">
+        <a:description></a:description>
+        <a:expression>#&quot;SYSTEM_SYSRULES_startRuleTestsAll&quot;(&#xD;
+   onSuccess: #&quot;SYSTEM_SYSRULES_httpResponse&quot;(&#xD;
+    statusCode: 200,&#xD;
+    body: fv!testRunId&#xD;
+  ),&#xD;
+  onError: #&quot;SYSTEM_SYSRULES_httpResponse&quot;(&#xD;
+    statusCode: 500,&#xD;
+    body: &quot;An error occurred when calling a!startRuleTestsAll&quot; &#xD;
+  )&#xD;
+)</a:expression>
+        <a:urlAlias>startRuleTestsAll</a:urlAlias>
+        <a:httpMethod>POST</a:httpMethod>
+        <a:system>false</a:system>
+    </webApi>
+    <roleMap>
+        <role name="web_api_administrator">
+            <users/>
+            <groups>
+                <groupUuid>_e-0000dd37-e908-8000-9aee-01075c01075c_142</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <typedValue>
+        <type>
+            <name>WebApiRequest?list</name>
+            <namespace>http://www.appian.com/ae/types/2009</namespace>
+        </type>
+        <value>
+            <el>
+                <a:path>ciStartRuleTestsAll</a:path>
+                <a:body/>
+            </el>
+        </value>
+    </typedValue>
+</webApiHaul>

@@ -1,0 +1,323 @@
+Success (11):
+group 59 _e-0000dd37-e908-8000-9aee-01075c01075c_142 "Unit Testing Administrators"
+content 7789 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36804 "Automated Testing"
+content 7790 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36805 "APPLICATIONS_TO_TEST"
+content 7797 _a-0000dd45-b36c-8000-aae2-01ef9001ef90_8131 "ciSystemTestUI"
+application 7791 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36803 "Automated Testing"
+taskReport 7 8002a0e3-a9b8-4894-86b5-76f3b39dd39d "ciAutomatedTestingReport"
+webApi 3 badc35ac-de84-411b-b03e-f84c49026f1b "ciStartRuleTestsAll"
+webApi 4 e1002dd3-1302-40cb-9820-dafcd4ae7a5f "ciStartRuleTestsApplications"
+webApi 5 c8e4ad7f-d4b4-4157-90f1-49f5059de383 "ciTestRunStatusForId"
+webApi 6 0b0ad1dc-2394-468d-af68-1a08db5620a0 "ciTestRunResultForId"
+site 4 bf467989-fd4e-4297-9b86-24b7bc234900 "unitTesting"
+
+Referenced precedents that were not exported (2):
+user mike mike
+application 6321 _a-0000dd38-69a4-8000-9ba2-011c48011c48_35984
+
+Trace:
+2016-08-04 14:25:28.568 DEBUG application 7791 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36803 Begin transport.
+2016-08-04 14:25:28.568 DEBUG application 7791 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36803 Retrieving object data.
+2016-08-04 14:25:28.571 DEBUG application 7791 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36803 App associated objects: [group=[_e-0000dd37-e908-8000-9aee-01075c01075c_142],content=[_a-0000dd52-fbf0-8000-9ba2-011c48011c48_36804, _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36805, _a-0000dd45-b36c-8000-aae2-01ef9001ef90_8131],taskReport=[8002a0e3-a9b8-4894-86b5-76f3b39dd39d],webApi=[badc35ac-de84-411b-b03e-f84c49026f1b, e1002dd3-1302-40cb-9820-dafcd4ae7a5f, c8e4ad7f-d4b4-4157-90f1-49f5059de383, 0b0ad1dc-2394-468d-af68-1a08db5620a0],site=[bf467989-fd4e-4297-9b86-24b7bc234900]]
+2016-08-04 14:25:28.575 DEBUG application 7791 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36803 Invalid associated objects: []
+2016-08-04 14:25:28.575 DEBUG application 7791 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36803 Adding valid associated objects to be exported: GlobalBindingMap[group={_e-0000dd37-e908-8000-9aee-01075c01075c_142=59},content={_a-0000dd52-fbf0-8000-9ba2-011c48011c48_36804=7789, _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36805=7790, _a-0000dd45-b36c-8000-aae2-01ef9001ef90_8131=7797},taskReport={8002a0e3-a9b8-4894-86b5-76f3b39dd39d=7},webApi={badc35ac-de84-411b-b03e-f84c49026f1b=3, e1002dd3-1302-40cb-9820-dafcd4ae7a5f=4, c8e4ad7f-d4b4-4157-90f1-49f5059de383=5, 0b0ad1dc-2394-468d-af68-1a08db5620a0=6},site={bf467989-fd4e-4297-9b86-24b7bc234900=4}]
+2016-08-04 14:25:28.575 DEBUG application 7791 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36803 Setting uuids of object references.
+2016-08-04 14:25:28.575 DEBUG application 7791 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36803 Processing reference: Application.forum
+2016-08-04 14:25:28.576 DEBUG application 7791 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36803 Processing reference: Application.parent
+2016-08-04 14:25:28.577 DEBUG application 7791 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36803 Processing reference: com.appiancorp.suiteapi.content.ContentRoleMap@6c41e4df[
+  ContentRole[name=readers,inherit=false,allowForAll=false]
+  ContentRole[name=authors,inherit=false,allowForAll=false]
+  ContentRole[name=administrators,usernames=[mike],inherit=false,allowForAll=false]
+  ContentRole[name=denyReaders,inherit=false,allowForAll=false]
+  ContentRole[name=denyAuthors,inherit=false,allowForAll=false]
+  ContentRole[name=denyAdministrators,inherit=false,allowForAll=false]
+  securityVector=129:SEC_PUBLIC=true,SEC_CREATOR_ADMIN=true,SEC_INH_ADMIN=false,SEC_INH_EDITOR=false,SEC_INH_VIEWER=false,SEC_ALL_ADMIN=false,SEC_ALL_EDITOR=false,SEC_ALL_VIEWER=false
+]
+2016-08-04 14:25:28.577 DEBUG application 7791 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36803 Processing reference: ContentRole[name=readers,inherit=false,allowForAll=false]
+2016-08-04 14:25:28.577 DEBUG application 7791 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36803 Processing reference: ContentRole[name=authors,inherit=false,allowForAll=false]
+2016-08-04 14:25:28.577 DEBUG application 7791 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36803 Processing reference: ContentRole[name=administrators,usernames=[mike],inherit=false,allowForAll=false]
+2016-08-04 14:25:28.578 DEBUG application 7791 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36803 Processing reference: ContentRole[name=denyReaders,inherit=false,allowForAll=false]
+2016-08-04 14:25:28.578 DEBUG application 7791 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36803 Processing reference: ContentRole[name=denyAuthors,inherit=false,allowForAll=false]
+2016-08-04 14:25:28.578 DEBUG application 7791 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36803 Processing reference: ContentRole[name=denyAdministrators,inherit=false,allowForAll=false]
+2016-08-04 14:25:28.579 DEBUG group 59 _e-0000dd37-e908-8000-9aee-01075c01075c_142 Begin transport.
+2016-08-04 14:25:28.579 DEBUG group 59 _e-0000dd37-e908-8000-9aee-01075c01075c_142 Retrieving object data.
+2016-08-04 14:25:28.583 DEBUG group 59 _e-0000dd37-e908-8000-9aee-01075c01075c_142 Setting uuids of object references.
+2016-08-04 14:25:28.583 DEBUG group 59 _e-0000dd37-e908-8000-9aee-01075c01075c_142 Processing reference: Role[name=<null>]
+2016-08-04 14:25:28.583 DEBUG group 59 _e-0000dd37-e908-8000-9aee-01075c01075c_142 Processing reference: Group.groupTypeId
+2016-08-04 14:25:28.584 DEBUG group 59 _e-0000dd37-e908-8000-9aee-01075c01075c_142 Processing reference: Group.parentId
+2016-08-04 14:25:28.584 DEBUG group 59 _e-0000dd37-e908-8000-9aee-01075c01075c_142 Processing reference: Group.homePageId
+2016-08-04 14:25:28.584 DEBUG group 59 _e-0000dd37-e908-8000-9aee-01075c01075c_142 Processing reference: Role[name=<null>]
+2016-08-04 14:25:28.584 DEBUG group 59 _e-0000dd37-e908-8000-9aee-01075c01075c_142 Exporting binary resources.
+2016-08-04 14:25:28.584 DEBUG group 59 _e-0000dd37-e908-8000-9aee-01075c01075c_142 Serializing object to XML.
+2016-08-04 14:25:28.585 DEBUG group 59 _e-0000dd37-e908-8000-9aee-01075c01075c_142 Object transported.
+2016-08-04 14:25:28.586 DEBUG content 7789 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36804 Begin transport.
+2016-08-04 14:25:28.586 DEBUG content 7789 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36804 Retrieving object data.
+2016-08-04 14:25:28.591 DEBUG content 7789 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36804 Setting uuids of object references.
+2016-08-04 14:25:28.591 DEBUG content 7789 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36804 Processing reference: RulesFolder.forum
+2016-08-04 14:25:28.591 DEBUG content 7789 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36804 Processing reference: RulesFolder.parent
+2016-08-04 14:25:28.593 DEBUG content 7789 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36804 Processing reference: com.appiancorp.suiteapi.content.ContentRoleMap@591ddee9[
+  ContentRole[name=readers,inherit=false,allowForAll=false]
+  ContentRole[name=authors,inherit=false,allowForAll=false]
+  ContentRole[name=administrators,groupIds=[59],inherit=false,allowForAll=false]
+  ContentRole[name=denyReaders,inherit=false,allowForAll=false]
+  ContentRole[name=denyAuthors,inherit=false,allowForAll=false]
+  ContentRole[name=denyAdministrators,inherit=false,allowForAll=false]
+  securityVector=1:SEC_PUBLIC=true,SEC_CREATOR_ADMIN=false,SEC_INH_ADMIN=false,SEC_INH_EDITOR=false,SEC_INH_VIEWER=false,SEC_ALL_ADMIN=false,SEC_ALL_EDITOR=false,SEC_ALL_VIEWER=false
+]
+2016-08-04 14:25:28.593 DEBUG content 7789 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36804 Processing reference: ContentRole[name=readers,inherit=false,allowForAll=false]
+2016-08-04 14:25:28.593 DEBUG content 7789 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36804 Processing reference: ContentRole[name=authors,inherit=false,allowForAll=false]
+2016-08-04 14:25:28.593 DEBUG content 7789 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36804 Processing reference: ContentRole[name=administrators,groupIds=[59],inherit=false,allowForAll=false]
+2016-08-04 14:25:28.593 DEBUG content 7789 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36804 Processing reference: ContentRole[name=denyReaders,inherit=false,allowForAll=false]
+2016-08-04 14:25:28.593 DEBUG content 7789 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36804 Processing reference: ContentRole[name=denyAuthors,inherit=false,allowForAll=false]
+2016-08-04 14:25:28.593 DEBUG content 7789 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36804 Processing reference: ContentRole[name=denyAdministrators,inherit=false,allowForAll=false]
+2016-08-04 14:25:28.593 DEBUG content 7789 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36804 Exporting binary resources.
+2016-08-04 14:25:28.593 DEBUG content 7789 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36804 Serializing object to XML.
+2016-08-04 14:25:28.594 DEBUG content 7789 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36804 Object transported.
+2016-08-04 14:25:28.594 DEBUG content 7790 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36805 Begin transport.
+2016-08-04 14:25:28.594 DEBUG content 7790 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36805 Retrieving object data.
+2016-08-04 14:25:28.598 DEBUG content 7790 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36805 Setting uuids of object references.
+2016-08-04 14:25:28.598 DEBUG content 7790 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36805 Processing reference: [Content:id=7790,versionId=-1,name=APPLICATIONS_TO_TEST,description=,type=32,subtype=0,uuid=_a-0000dd52-fbf0-8000-9ba2-011c48011c48_36805,parent=7789,parentName=Automated Testing,parentType=2,log=7790,logName=APPLICATIONS_TO_TEST,state=255,visibility=35,security=1,creator=mike,createdTimestamp=2016-08-04 13:20:01.0,updatedTimestamp=2016-08-04 13:20:01.0,size=0,lockedBy=,changesRequireApproval=false,attributes={system=0, hidden=0, ruletype=0, multiple=1, value=[Ljava.lang.Long;@61c574af, returnType=86},partition=2,partitionName=C:/appian/_admin/accdocs2]
+2016-08-04 14:25:28.599 DEBUG content 7790 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36805 Processing reference: Constant.forum
+2016-08-04 14:25:28.599 DEBUG content 7790 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36805 Processing reference: Constant.parent
+2016-08-04 14:25:28.601 DEBUG content 7790 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36805 Processing reference: com.appiancorp.suiteapi.content.ContentRoleMap@63112047[
+  ContentRole[name=readers,inherit=false,allowForAll=false]
+  ContentRole[name=authors,inherit=false,allowForAll=false]
+  ContentRole[name=administrators,groupIds=[59],inherit=false,allowForAll=false]
+  ContentRole[name=denyReaders,inherit=false,allowForAll=false]
+  ContentRole[name=denyAuthors,inherit=false,allowForAll=false]
+  ContentRole[name=denyAdministrators,inherit=false,allowForAll=false]
+  securityVector=1:SEC_PUBLIC=true,SEC_CREATOR_ADMIN=false,SEC_INH_ADMIN=false,SEC_INH_EDITOR=false,SEC_INH_VIEWER=false,SEC_ALL_ADMIN=false,SEC_ALL_EDITOR=false,SEC_ALL_VIEWER=false
+]
+2016-08-04 14:25:28.601 DEBUG content 7790 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36805 Processing reference: ContentRole[name=readers,inherit=false,allowForAll=false]
+2016-08-04 14:25:28.601 DEBUG content 7790 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36805 Processing reference: ContentRole[name=authors,inherit=false,allowForAll=false]
+2016-08-04 14:25:28.601 DEBUG content 7790 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36805 Processing reference: ContentRole[name=administrators,groupIds=[59],inherit=false,allowForAll=false]
+2016-08-04 14:25:28.601 DEBUG content 7790 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36805 Processing reference: ContentRole[name=denyReaders,inherit=false,allowForAll=false]
+2016-08-04 14:25:28.601 DEBUG content 7790 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36805 Processing reference: ContentRole[name=denyAuthors,inherit=false,allowForAll=false]
+2016-08-04 14:25:28.601 DEBUG content 7790 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36805 Processing reference: ContentRole[name=denyAdministrators,inherit=false,allowForAll=false]
+2016-08-04 14:25:28.601 DEBUG content 7790 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36805 Exporting binary resources.
+2016-08-04 14:25:28.601 DEBUG content 7790 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36805 Serializing object to XML.
+2016-08-04 14:25:28.603 DEBUG content 7790 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36805 Object transported.
+2016-08-04 14:25:28.603 DEBUG content 7797 _a-0000dd45-b36c-8000-aae2-01ef9001ef90_8131 Begin transport.
+2016-08-04 14:25:28.603 DEBUG content 7797 _a-0000dd45-b36c-8000-aae2-01ef9001ef90_8131 Retrieving object data.
+2016-08-04 14:25:28.608 DEBUG content 7797 _a-0000dd45-b36c-8000-aae2-01ef9001ef90_8131 Setting uuids of object references.
+2016-08-04 14:25:28.608 DEBUG content 7797 _a-0000dd45-b36c-8000-aae2-01ef9001ef90_8131 Processing reference: [Content:id=7796,versionId=-1,name=ciSystemTestUI,description=,type=32,subtype=1,uuid=_a-0000dd45-b36c-8000-aae2-01ef9001ef90_8131,parent=7789,parentName=Automated Testing,parentType=2,log=7797,logName=ciSystemTestUI,state=255,visibility=35,security=15,creator=mike,createdTimestamp=2016-08-04 14:13:51.0,updatedTimestamp=2016-08-04 14:13:51.0,size=0,lockedBy=,changesRequireApproval=false,attributes={dep_rules=[Ljava.lang.Long;@16d9b6b5, system=0, preferredEditor=interface, hidden=0, offlineEnabled=false, ruletype=1, dep_functions=[Ljava.lang.String;@6d7dccf7, definition==load(
+  local!testRunId,
+  local!error,
+  local!testStatus,
+  local!isAppTest,
+  with(
+    local!testRunResults: if(isnull(local!testRunId), null, #"SYSTEM_SYSRULES_testRunResultForId"(local!testRunId)),
+    #"SYSTEM_SYSRULES_dashboardLayout"(
+      firstColumnContents: {
+        #"SYSTEM_SYSRULES_ButtonLayout"(
+          primaryButtons: {
+          },
+          secondaryButtons: {
+            #"SYSTEM_SYSRULES_ButtonWidget"(
+              label: "Run System Test",
+              value: local!testRunId,
+              saveInto: {
+                #"SYSTEM_SYSRULES_startRuleTestsAll"(
+                  onSuccess: {
+                    a!save(local!testRunId, fv!testRunId)
+                  },
+                  onError: {
+                    a!save(local!error, "Could not execute test.")
+                  }
+                ),
+                a!save(local!isAppTest, false)
+              }
+            ),
+            #"SYSTEM_SYSRULES_ButtonWidget"(
+              label: "Run App Test",
+              value: local!testRunId,
+              saveInto: {
+                  #"SYSTEM_SYSRULES_startRuleTestsApplications"(
+                    applications: #"_a-0000dd52-fbf0-8000-9ba2-011c48011c48_36805",
+                    onSuccess: {
+                      a!save(local!testRunId, fv!testRunId)
+                    },
+                    onError: {
+                      a!save(local!error, "Could not execute test.")
+                    }
+                ),
+                a!save(local!isAppTest, true)
+              }
+            ),
+            #"SYSTEM_SYSRULES_ButtonWidget"(
+              label: "Refresh",
+              value: local!testStatus
+              ,
+              saveInto: {
+                a!save(local!testStatus, #"SYSTEM_SYSRULES_testRunStatusForId"(local!testRunId))
+              }
+            )
+          }
+        ),
+        #"SYSTEM_SYSRULES_sectionLayout"(
+          label: "Summary" & 
+             if(isnull(local!testRunResults), null, " - " & local!testRunResults.type),
+          firstColumnContents: {
+            if(isnull(local!testRunResults), 
+              {},
+              {
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "Test-run ID",
+                  labelPosition: "ADJACENT",
+                  value: local!testRunId,
+                  readOnly: true
+                ),
+                #"SYSTEM_SYSRULES_richTextDisplayField"(
+                  label: "Status",
+                  labelPosition: "ADJACENT",
+                  value: if(local!testStatus = "COMPLETE",
+                    if(
+                      local!testRunResults.status="ERROR",
+                      {
+                        #"SYSTEM_SYSRULES_richTextImage"(image: #"SYSTEM_SYSRULES_documentImage"(document: #"SYSTEM_SYSRULES_iconIndicator"("STATUS_ERROR"))),
+                        "One or more tests encountered an error"
+                      },
+                      local!testRunResults.status="FAIL",
+                      {
+                        #"SYSTEM_SYSRULES_richTextImage"(image: #"SYSTEM_SYSRULES_documentImage"(document: #"SYSTEM_SYSRULES_iconIndicator"("STATUS_NOTDONE"))),
+                        "One or more test case assertions failed"
+                      },
+                      local!testRunResults.status="PASS",
+                      {
+                        #"SYSTEM_SYSRULES_richTextImage"(image: #"SYSTEM_SYSRULES_documentImage"(document: #"SYSTEM_SYSRULES_iconIndicator"("STATUS_OK"))),
+                        "All test case assertions passed"
+                      },
+                      {
+                        #"SYSTEM_SYSRULES_richTextImage"(image: #"SYSTEM_SYSRULES_documentImage"(document: #"SYSTEM_SYSRULES_iconIndicator"("PROGRESS_RUNNING"))),
+                        "In progress"
+                      }
+                    ),
+                      {
+                        #"SYSTEM_SYSRULES_richTextImage"(image: #"SYSTEM_SYSRULES_documentImage"(document: #"SYSTEM_SYSRULES_iconIndicator"("PROGRESS_RUNNING"))),
+                        "In progress"
+                      }                    
+                  )
+                    
+                ),
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "Execution Time",
+                  labelPosition: "ADJACENT",
+                  value: (local!testRunResults.totalExecutionTime) & " seconds",
+                  readOnly: true
+                ),
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "Total Time",
+                  labelPosition: "ADJACENT",
+                  value: (local!testRunResults.totalElapsedTime) & " seconds",
+                  readOnly: true
+                ),
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "Executed On",
+                  labelPosition: "ADJACENT",
+                  value: local!testRunResults.startTime,
+                  readOnly: true
+                ),
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "Executed By",
+                  labelPosition: "ADJACENT",
+                  value: user(local!testRunResults.executedBy, "firstName") & " " &
+                  user(local!testRunResults.executedBy, "lastName"),
+                  readOnly: true
+                )
+              }
+            )
+          },
+          secondColumnContents: {
+            if(isnull(local!testRunResults), 
+              {},
+              #"SYSTEM_SYSRULES_pieChartField"(
+                labelPosition: "COLLAPSED",
+                series: {
+                  #"SYSTEM_SYSRULES_chartSeries"(label: "Passed", data: local!testRunResults.passCount, color: "GREEN"),
+                  #"SYSTEM_SYSRULES_chartSeries"(label: "Failed", data: local!testRunResults.failureCount, color: "YELLOW"),
+                  #"SYSTEM_SYSRULES_chartSeries"(label: "Error", data: local!testRunResults.errorCount, color: "RED")
+                },
+                showDataLabels: true
+              )
+            )
+          }
+        )
+      },
+      secondColumnContents: {}
+    )
+  )
+), dep_types=[Ljava.lang.String;@69535c1c, parameters=[Lcom.appiancorp.suiteapi.process.TypedVariable;@1bf9024, dep_variables=[[Ljava.lang.String;@5a88e2b8},partition=3,partitionName=C:/appian/_admin/accdocs3]
+2016-08-04 14:25:28.617 DEBUG content 7797 _a-0000dd45-b36c-8000-aae2-01ef9001ef90_8131 Processing reference: FreeformRule.forum
+2016-08-04 14:25:28.617 DEBUG content 7797 _a-0000dd45-b36c-8000-aae2-01ef9001ef90_8131 Processing reference: FreeformRule.parent
+2016-08-04 14:25:28.618 DEBUG content 7797 _a-0000dd45-b36c-8000-aae2-01ef9001ef90_8131 Processing reference: com.appiancorp.suiteapi.content.ContentRoleMap@585fb300[
+  ContentRole[name=readers,inherit=true,allowForAll=false]
+  ContentRole[name=authors,inherit=true,allowForAll=false]
+  ContentRole[name=administrators,inherit=true,allowForAll=false]
+  ContentRole[name=denyReaders,inherit=false,allowForAll=false]
+  ContentRole[name=denyAuthors,inherit=false,allowForAll=false]
+  ContentRole[name=denyAdministrators,inherit=false,allowForAll=false]
+  securityVector=15:SEC_PUBLIC=true,SEC_CREATOR_ADMIN=false,SEC_INH_ADMIN=true,SEC_INH_EDITOR=true,SEC_INH_VIEWER=true,SEC_ALL_ADMIN=false,SEC_ALL_EDITOR=false,SEC_ALL_VIEWER=false
+]
+2016-08-04 14:25:28.618 DEBUG content 7797 _a-0000dd45-b36c-8000-aae2-01ef9001ef90_8131 Processing reference: ContentRole[name=readers,inherit=true,allowForAll=false]
+2016-08-04 14:25:28.618 DEBUG content 7797 _a-0000dd45-b36c-8000-aae2-01ef9001ef90_8131 Processing reference: ContentRole[name=authors,inherit=true,allowForAll=false]
+2016-08-04 14:25:28.618 DEBUG content 7797 _a-0000dd45-b36c-8000-aae2-01ef9001ef90_8131 Processing reference: ContentRole[name=administrators,inherit=true,allowForAll=false]
+2016-08-04 14:25:28.618 DEBUG content 7797 _a-0000dd45-b36c-8000-aae2-01ef9001ef90_8131 Processing reference: ContentRole[name=denyReaders,inherit=false,allowForAll=false]
+2016-08-04 14:25:28.618 DEBUG content 7797 _a-0000dd45-b36c-8000-aae2-01ef9001ef90_8131 Processing reference: ContentRole[name=denyAuthors,inherit=false,allowForAll=false]
+2016-08-04 14:25:28.618 DEBUG content 7797 _a-0000dd45-b36c-8000-aae2-01ef9001ef90_8131 Processing reference: ContentRole[name=denyAdministrators,inherit=false,allowForAll=false]
+2016-08-04 14:25:28.618 DEBUG content 7797 _a-0000dd45-b36c-8000-aae2-01ef9001ef90_8131 Exporting binary resources.
+2016-08-04 14:25:28.618 DEBUG content 7797 _a-0000dd45-b36c-8000-aae2-01ef9001ef90_8131 Serializing object to XML.
+2016-08-04 14:25:28.619 DEBUG content 7797 _a-0000dd45-b36c-8000-aae2-01ef9001ef90_8131 Object transported.
+2016-08-04 14:25:28.62 DEBUG taskReport 7 8002a0e3-a9b8-4894-86b5-76f3b39dd39d Begin transport.
+2016-08-04 14:25:28.62 DEBUG taskReport 7 8002a0e3-a9b8-4894-86b5-76f3b39dd39d Retrieving object data.
+2016-08-04 14:25:28.625 DEBUG taskReport 7 8002a0e3-a9b8-4894-86b5-76f3b39dd39d Setting uuids of object references.
+2016-08-04 14:25:28.625 DEBUG taskReport 7 8002a0e3-a9b8-4894-86b5-76f3b39dd39d Processing reference: UiContainer.uiExpr
+2016-08-04 14:25:28.626 DEBUG taskReport 7 8002a0e3-a9b8-4894-86b5-76f3b39dd39d Exporting binary resources.
+2016-08-04 14:25:28.626 DEBUG taskReport 7 8002a0e3-a9b8-4894-86b5-76f3b39dd39d Serializing object to XML.
+2016-08-04 14:25:28.627 DEBUG taskReport 7 8002a0e3-a9b8-4894-86b5-76f3b39dd39d Object transported.
+2016-08-04 14:25:28.628 DEBUG webApi 3 badc35ac-de84-411b-b03e-f84c49026f1b Begin transport.
+2016-08-04 14:25:28.628 DEBUG webApi 3 badc35ac-de84-411b-b03e-f84c49026f1b Retrieving object data.
+2016-08-04 14:25:28.646 DEBUG webApi 3 badc35ac-de84-411b-b03e-f84c49026f1b Setting uuids of object references.
+2016-08-04 14:25:28.646 DEBUG webApi 3 badc35ac-de84-411b-b03e-f84c49026f1b Processing reference: Role[name=web_api_administrator,groupIds=[59]]
+2016-08-04 14:25:28.647 DEBUG webApi 3 badc35ac-de84-411b-b03e-f84c49026f1b Processing reference: WebApi.expression
+2016-08-04 14:25:28.647 DEBUG webApi 3 badc35ac-de84-411b-b03e-f84c49026f1b Exporting binary resources.
+2016-08-04 14:25:28.647 DEBUG webApi 3 badc35ac-de84-411b-b03e-f84c49026f1b Serializing object to XML.
+2016-08-04 14:25:28.648 DEBUG webApi 3 badc35ac-de84-411b-b03e-f84c49026f1b Object transported.
+2016-08-04 14:25:28.648 DEBUG webApi 4 e1002dd3-1302-40cb-9820-dafcd4ae7a5f Begin transport.
+2016-08-04 14:25:28.648 DEBUG webApi 4 e1002dd3-1302-40cb-9820-dafcd4ae7a5f Retrieving object data.
+2016-08-04 14:25:28.664 DEBUG webApi 4 e1002dd3-1302-40cb-9820-dafcd4ae7a5f Setting uuids of object references.
+2016-08-04 14:25:28.664 DEBUG webApi 4 e1002dd3-1302-40cb-9820-dafcd4ae7a5f Processing reference: Role[name=web_api_administrator,groupIds=[59]]
+2016-08-04 14:25:28.665 DEBUG webApi 4 e1002dd3-1302-40cb-9820-dafcd4ae7a5f Processing reference: WebApi.expression
+2016-08-04 14:25:28.666 DEBUG webApi 4 e1002dd3-1302-40cb-9820-dafcd4ae7a5f Exporting binary resources.
+2016-08-04 14:25:28.666 DEBUG webApi 4 e1002dd3-1302-40cb-9820-dafcd4ae7a5f Serializing object to XML.
+2016-08-04 14:25:28.668 DEBUG webApi 4 e1002dd3-1302-40cb-9820-dafcd4ae7a5f Object transported.
+2016-08-04 14:25:28.668 DEBUG webApi 5 c8e4ad7f-d4b4-4157-90f1-49f5059de383 Begin transport.
+2016-08-04 14:25:28.668 DEBUG webApi 5 c8e4ad7f-d4b4-4157-90f1-49f5059de383 Retrieving object data.
+2016-08-04 14:25:28.683 DEBUG webApi 5 c8e4ad7f-d4b4-4157-90f1-49f5059de383 Setting uuids of object references.
+2016-08-04 14:25:28.683 DEBUG webApi 5 c8e4ad7f-d4b4-4157-90f1-49f5059de383 Processing reference: Role[name=web_api_administrator,groupIds=[59]]
+2016-08-04 14:25:28.684 DEBUG webApi 5 c8e4ad7f-d4b4-4157-90f1-49f5059de383 Processing reference: WebApi.expression
+2016-08-04 14:25:28.684 DEBUG webApi 5 c8e4ad7f-d4b4-4157-90f1-49f5059de383 Exporting binary resources.
+2016-08-04 14:25:28.684 DEBUG webApi 5 c8e4ad7f-d4b4-4157-90f1-49f5059de383 Serializing object to XML.
+2016-08-04 14:25:28.685 DEBUG webApi 5 c8e4ad7f-d4b4-4157-90f1-49f5059de383 Object transported.
+2016-08-04 14:25:28.685 DEBUG webApi 6 0b0ad1dc-2394-468d-af68-1a08db5620a0 Begin transport.
+2016-08-04 14:25:28.685 DEBUG webApi 6 0b0ad1dc-2394-468d-af68-1a08db5620a0 Retrieving object data.
+2016-08-04 14:25:28.7 DEBUG webApi 6 0b0ad1dc-2394-468d-af68-1a08db5620a0 Setting uuids of object references.
+2016-08-04 14:25:28.7 DEBUG webApi 6 0b0ad1dc-2394-468d-af68-1a08db5620a0 Processing reference: Role[name=web_api_administrator,groupIds=[59]]
+2016-08-04 14:25:28.701 DEBUG webApi 6 0b0ad1dc-2394-468d-af68-1a08db5620a0 Processing reference: WebApi.expression
+2016-08-04 14:25:28.701 DEBUG webApi 6 0b0ad1dc-2394-468d-af68-1a08db5620a0 Exporting binary resources.
+2016-08-04 14:25:28.701 DEBUG webApi 6 0b0ad1dc-2394-468d-af68-1a08db5620a0 Serializing object to XML.
+2016-08-04 14:25:28.702 DEBUG webApi 6 0b0ad1dc-2394-468d-af68-1a08db5620a0 Object transported.
+2016-08-04 14:25:28.703 DEBUG site 4 bf467989-fd4e-4297-9b86-24b7bc234900 Begin transport.
+2016-08-04 14:25:28.703 DEBUG site 4 bf467989-fd4e-4297-9b86-24b7bc234900 Retrieving object data.
+2016-08-04 14:25:28.709 DEBUG site 4 bf467989-fd4e-4297-9b86-24b7bc234900 Setting uuids of object references.
+2016-08-04 14:25:28.709 DEBUG site 4 bf467989-fd4e-4297-9b86-24b7bc234900 Processing reference: SiteTemplate.faviconRef
+2016-08-04 14:25:28.709 DEBUG site 4 bf467989-fd4e-4297-9b86-24b7bc234900 Processing reference: SiteTemplate.headerBackgroundColorExpr
+2016-08-04 14:25:28.71 DEBUG site 4 bf467989-fd4e-4297-9b86-24b7bc234900 Processing reference: SiteTemplate.logoRef
+2016-08-04 14:25:28.71 DEBUG site 4 bf467989-fd4e-4297-9b86-24b7bc234900 Processing reference: SitePage.uiObject
+2016-08-04 14:25:28.711 DEBUG site 4 bf467989-fd4e-4297-9b86-24b7bc234900 Processing reference: SitePage.visibilityExpr
+2016-08-04 14:25:28.711 DEBUG site 4 bf467989-fd4e-4297-9b86-24b7bc234900 Processing reference: SiteTemplate.selectedTabBackgroundColorExpr
+2016-08-04 14:25:28.711 DEBUG site 4 bf467989-fd4e-4297-9b86-24b7bc234900 Exporting binary resources.
+2016-08-04 14:25:28.711 DEBUG site 4 bf467989-fd4e-4297-9b86-24b7bc234900 Serializing object to XML.
+2016-08-04 14:25:28.715 DEBUG site 4 bf467989-fd4e-4297-9b86-24b7bc234900 Object transported.
+2016-08-04 14:25:28.715 DEBUG application 7791 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36803 Exporting binary resources.
+2016-08-04 14:25:28.715 DEBUG application 7791 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36803 Serializing object to XML.
+2016-08-04 14:25:28.716 DEBUG application 7791 _a-0000dd52-fbf0-8000-9ba2-011c48011c48_36803 Object transported.
